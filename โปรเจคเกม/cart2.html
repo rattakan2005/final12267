@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ตะกร้าสินค้า</title>
+  <style>
+    nav { background: #444; padding: 1em; display: flex; justify-content: center; gap: 2em; }
+    nav a { color: white; text-decoration: none; font-weight: bold; }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
+    header, footer { background-color: #222; color: #fff; padding: 1em; text-align: center; }
+    .container { padding: 2em; max-width: 800px; margin: auto; }
+    .cart-item { border: 1px solid #ccc; background: #fff; padding: 1em; margin-bottom: 1em; border-radius: 10px; display: flex; justify-content: space-between; align-items: center; }
+    .btn { padding: 0.5em 1em; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    .btn:hover { background: #0056b3; }
+    .cart-item { margin-top: 2em; }
+  </style>
+</head>
+<nav>
+  <a href="main.html">หน้าแรก</a>
+  <a href="cart.html">หมวดหมู่สินค้า</a>
+  <a href="reviews.html">รีวิว</a>
+  <a href="support.html">สนับสนุนลูกค้า</a>
+  <a href="about.html">เกี่ยวกับเรา</a>
+</nav>
+<body>
+  <header>
+    <h1>ตะกร้าสินค้าของคุณ</h1>
+  </header>
+  <div class="container">
+    <div id="cart-items"></div>
+    <p id="total">รวมทั้งหมด: 0 บาท</p>
+    <a href="cart3.html" class="btn">ดำเนินการชำระเงิน</a>
+  </div>
+ 
+  <script>
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartContainer = document.getElementById('cart-items');
+    const totalDisplay = document.getElementById('total');
+    let total = 0;
+
+    if (cartItems.length === 0) {
+      cartContainer.innerHTML = '<p>ตะกร้าสินค้าว่างเปล่า</p>';
+    } else {
+      cartItems.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'cart-item';
+        div.innerHTML = `
+          <span>${item.name} x${item.quantity} - ${item.price * item.quantity} บาท</span>
+          <button class="btn" onclick="removeItem('${item.name}')">ลบ</button>
+        `;
+        cartContainer.appendChild(div);
+        total += item.price * item.quantity;
+      });
+    }
+    totalDisplay.textContent = `รวมทั้งหมด: ${total} บาท`;
+
+    function removeItem(name) {
+      const newCart = cartItems.filter(item => item.name !== name);
+      localStorage.setItem('cart', JSON.stringify(newCart));
+      location.reload();
+    }
+  </script>
+</body>
+</html>

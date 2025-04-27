@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; } 
+    body { background-color: #f4f4f4; color: #333; } 
+    nav { background: #444; padding: 1em; display: flex; justify-content: center; gap: 2em; } 
+    nav a { color: white; text-decoration: none; font-weight: bold; transition: color 0.3s; } 
+    nav a:hover { color: #ffd700; } 
+    .products-detail { max-width: 800px; background: #fff; margin: 2em auto; padding: 2em; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); text-align: center; } 
+    .products-detail h2 { color: #222; margin-bottom: 1em; } 
+    .product-image { width: 100%; max-width: 400px; border-radius: 10px; margin-bottom: 1em; } 
+    .products-detail p { font-size: 1.1em; margin: 0.5em 0; } 
+    .btn { display: inline-block; margin: 1em 0.5em 0; padding: 0.6em 1.2em; background-color: #007bff; color: white; border: none; border-radius: 6px; text-decoration: none; transition: background-color 0.3s ease; } 
+    .btn:hover { background-color: #0056b3; } 
+    .reviews { max-width: 800px; background: #ffffff; margin: 2em auto; padding: 2em; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); } 
+    .reviews h2 { margin-bottom: 1em; text-align: center; color: #444; } 
+    textarea { width: 100%; padding: 1em; font-size: 1em; border-radius: 8px; border: 1px solid #ccc; resize: vertical; margin-bottom: 1em; } 
+      .reviews p { margin-bottom: 0.5em; font-size: 1em; } 
+      button.btn { background-color: #28a745; } 
+      button.btn:hover { background-color: #218838; }
+
+  </style>
+    <nav>
+        <a href="main.html">หน้าแรก</a>
+        <a href="cart.html">หมวดหมู่สินค้า</a>
+        <a href="reviews.html">รีวิว</a>
+        <a href="support.html">สนับสนุนลูกค้า</a>
+        <a href="about.html">เกี่ยวกับเรา</a>
+      </nav>
+      <section class="products-detail">
+        <h2>รายละเอียดสินค้า</h2>
+        <img src="images/G2.jpg" alt="Gaming Keyboard" class="product-image">
+        <p><strong>คีย์บอร์ดเกมมิ่ง:</strong> ไฟ RGB, ปุ่มแมคคานิคอล, รองรับทุกระบบ</p>
+        <a class="btn" href="#">เพิ่มในตะกร้า</a>
+        <a class="btn" href="#">ซื้อเลย</a>
+        <p>คะแนน: ⭐⭐⭐⭐☆</p>
+        <p>รีวิว: "สินค้าคุณภาพดีมากครับ ส่งไว ใช้งานดีเยี่ยม!"</p>
+      </section>
+  <section class="reviews" id="reviews">
+    <h2>รีวิวจากลูกค้า</h2>
+    <p>คุณสามารถเขียนรีวิวและให้คะแนนสินค้าได้ที่นี่</p>
+    <textarea placeholder="พิมพ์รีวิวของคุณ..." rows="4"></textarea>
+    <p>ให้คะแนน: ⭐⭐⭐⭐⭐</p>
+    <button class="btn">ส่งรีวิว</button>
+  </section>
+</head>
+</html>

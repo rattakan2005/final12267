@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>เกี่ยวกับเรา | Game & Tech Store</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+    }
+
+    nav {
+      background: #222;
+      padding: 1em 2em;
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      position: relative;
+      transition: color 0.3s ease, transform 0.2s;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      left: 0;
+      bottom: -4px;
+      background: #00bfff;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00bfff;
+      transform: translateY(-2px);
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .about {
+      background-color: #fff;
+      padding: 2em;
+      margin-top: 3em;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .about h2 {
+      color: #007bff;
+      font-size: 1.8em;
+      margin-bottom: 0.5em;
+      border-left: 5px solid #007bff;
+      padding-left: 0.6em;
+    }
+
+    .about p {
+      font-size: 1.1em;
+      color: #444;
+      line-height: 1.8;
+    }
+
+    @media screen and (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="main.html">หน้าแรก</a>
+    <a href="cart.html">หมวดหมู่สินค้า</a>
+    <a href="reviews.html">รีวิว</a>
+    <a href="support.html">สนับสนุนลูกค้า</a>
+    <a href="about.html">เกี่ยวกับเรา</a>
+  </nav>
+
+  <section class="about" id="about">
+    <h2>เกี่ยวกับเรา</h2>
+    <p>Game & Tech Store ก่อตั้งขึ้นเพื่อรวบรวมสินค้าเกมและเทคโนโลยีคุณภาพสูงให้แก่ลูกค้าในราคาที่จับต้องได้ วิสัยทัศน์ของเราคือการเป็นผู้นำด้านสินค้าเกมในไทย</p>
+  </section>
+
+</body>
+</html>

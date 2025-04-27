@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game & Tech Store</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+  
+    header, footer {
+      background-color: #222;
+      color: #fff;
+      padding: 1em;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+  
+    nav {
+      background: #333;
+      padding: 1em;
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+  
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s, transform 0.3s;
+    }
+  
+    nav a:hover {
+      color: #ffd700;
+      transform: scale(1.1);
+    }
+  
+    .banner {
+      background: url('https://i.pinimg.com/736x/51/81/8e/51818ec165fa3d0236ab7d66a1e70924.jpg') no-repeat center center/cover;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2.5em;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    }
+  
+    .container {
+      padding: 2em;
+      max-width: 1200px;
+      margin: auto;
+    }
+  
+    h2 {
+      border-left: 5px solid #007bff;
+      padding-left: 0.5em;
+      margin-bottom: 1em;
+      color: #222;
+    }
+  
+    .product-item, .category-item, .cart-item {
+      border: 1px solid #ddd;
+      padding: 1em;
+      margin-bottom: 2em;
+      border-radius: 10px;
+      background: #fff;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+  
+    .product-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+  
+    .product-image {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+      display: block;
+      border-radius: 8px;
+    }
+  
+    .btn {
+      padding: 0.6em 1.2em;
+      margin: 1em 0.5em 0 0;
+      background: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s;
+    }
+  
+    .btn:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+  
+    @media screen and (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 1em;
+      }
+  
+      .banner {
+        font-size: 1.5em;
+        text-align: center;
+      }
+  
+      .product-item, .category-item, .cart-item {
+        margin-bottom: 1.5em;
+      }
+    }
+  </style>
+  
+</head>
+<body>
+  <header>
+    <h1>Game & Tech Store</h1>
+  </header>
+  <nav>
+    <a href="main.html">หน้าแรก</a>
+    <a href="cart.html">หมวดหมู่สินค้า</a>
+    <a href="reviews.html">รีวิว</a>
+    <a href="support.html">สนับสนุนลูกค้า</a>
+    <a href="about.html">เกี่ยวกับเรา</a>
+  </nav>
+  <div class="banner" id="home">
+    Welcome To Game Shop
+  </div>
+  <div class="container">
+    <section class="products">
+      <h2>สินค้าแนะนำ</h2>
+    
+      <div class="product-item">
+        <img src="images/G1.jpg" alt="Game Console" class="product-image">
+        <h3>เครื่องเล่นเกมรุ่นใหม่</h3>
+        <p><strong>คุณสมบัติ:</strong> ความละเอียด 4K, รองรับ VR, เกมสุดมันส์</p>
+        <p><strong>ราคา:</strong> 14,990 บาท</p>
+        <a class="btn" href="#">เพิ่มในตะกร้า</a>
+        <a class="btn" href="#">ซื้อเลย</a>
+      </div>
+    
+      <div class="product-item">
+        <img src="images/G2.jpg" alt="Gaming Keyboard" class="product-image">
+        <h3>คีย์บอร์ดเกมมิ่ง RGB</h3>
+        <p><strong>คุณสมบัติ:</strong> ปุ่ม Mechanical, ไฟ RGB, รองรับ Windows & macOS</p>
+        <p><strong>ราคา:</strong> 2,490 บาท</p>
+        <a class="btn" href="#">เพิ่มในตะกร้า</a>
+        <a class="btn" href="#">ซื้อเลย</a>
+      </div>
+    
+      <div class="product-item">
+        <img src="images/g3.jpg" alt="Gaming Headset" class="product-image">
+        <h3>หูฟังเกมมิ่งเสียง 7.1</h3>
+        <p><strong>คุณสมบัติ:</strong> ไมค์ตัดเสียงรบกวน, แสงไฟ LED, น้ำหนักเบา</p>
+        <p><strong>ราคา:</strong> 1,790 บาท</p>
+        <a class="btn" href="#">เพิ่มในตะกร้า</a>
+        <a class="btn" href="#">ซื้อเลย</a>
+      </div>
+    </section>
+    
+  </div>
+  <footer>
+    <p>&copy; 2025 Game & Tech Store By . All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.product-item').forEach(product => {
+      const name = product.querySelector('h3').textContent.trim();
+      const priceText = product.querySelector('p:nth-of-type(2)').textContent;
+      const price = parseFloat(priceText.replace(/[^\d.]/g, ''));
+  
+      const addButton = product.querySelectorAll('.btn')[0]; // ปุ่ม "เพิ่มในตะกร้า"
+  
+      addButton.addEventListener('click', () => {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const existingItem = cart.find(item => item.name === name);
+  
+        if (existingItem) {
+          existingItem.quantity += 1;
+        } else {
+          cart.push({ name, price, quantity: 1 });
+        }
+  
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert(`${name} ถูกเพิ่มไปยังตะกร้าแล้ว!`);
+      });
+    });
+  </script>
+  
+</body>
+</html>
